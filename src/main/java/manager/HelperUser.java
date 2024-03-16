@@ -14,9 +14,7 @@ public class HelperUser  extends HelperBase{
         // WebElement loginTab1= wd.findElement(By.xpath("//a[text()='Log in']"));
         loginTab.click();
         //click(By.cssSelector("a[href='login']"));
-
     }
-
     public void fiiLoginRegisrtationForm(String email, String password){
         WebElement emailInput  = wd.findElement(By.xpath("//input[@id='email']"));
         emailInput.click();
@@ -30,12 +28,10 @@ public class HelperUser  extends HelperBase{
         passwordInput.clear();
         passwordInput.sendKeys(password);
         //type(By.name("password"),password);
-
     }
     public void submitLogin(){
-       click(By.xpath("//button[text()='Y’alla!']"));
 
+        click(By.xpath("//button[text()='Y’alla!']"));
     }
-
 
 }

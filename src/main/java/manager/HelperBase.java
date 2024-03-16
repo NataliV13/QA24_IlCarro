@@ -19,7 +19,7 @@ public class HelperBase {
             element.sendKeys();
         }
     }
-    public void click(By locator){
+    public void click(By locator) {
         WebElement element = wd.findElement(locator);
         element.click();
     }
