@@ -11,17 +11,25 @@ public class HelperBase {
     public HelperBase(WebDriver wd) {
         this.wd = wd;
     }
-    public void type(By locator, String text){
+
+    public void type(By locator, String text) {
         WebElement element = wd.findElement(locator);
-            element.click();
-            element.clear();
-            if(text!=null) {
+        element.click();
+        element.clear();
+        if (text != null) {
             element.sendKeys();
         }
     }
+
     public void click(By locator) {
         WebElement element = wd.findElement(locator);
         element.click();
     }
 
+   // public boolean isLogget() {
+
+
+   // }
+
 }
+
