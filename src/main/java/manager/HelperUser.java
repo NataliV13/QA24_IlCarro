@@ -10,28 +10,32 @@ public class HelperUser  extends HelperBase{
         super(wd);
     }
     public void openLoginRegistrationForm(){
-        WebElement loginTab = wd.findElement(By.cssSelector("a[href='login']"));
-        // WebElement loginTab1= wd.findElement(By.xpath("//a[text()='Log in']"));
-       // loginTab.click();
-        click(By.cssSelector("a[href='login']"));
+      WebElement loginTab = wd.findElement(By.cssSelector("a[href='login']"));
+      //WebElement loginTab1= wd.findElement(By.xpath("//a[text()='Log in']"));
+        loginTab.click();
+
+        // click(By.cssSelector("a[href='login']"));
     }
-    public void fiiLoginRegisrtationForm(String email, String password){
+    public void fillLoginRegistrationForm(String email, String password){
         WebElement emailInput  = wd.findElement(By.xpath("//input[@id='email']"));
         emailInput.click();
         emailInput.clear();
         emailInput.sendKeys(email);
-        //type(By.xpath("//input[@id='email']"),email);
+
+       // type(By.xpath("//input[@id='email']"),email);
+
 
         WebElement passwordInput =wd.findElement(By.xpath("//input[@id='password']"));
         //WebElement passwordInput2 = wd.findElement(By.name("password"));
         passwordInput.click();
         passwordInput.clear();
         passwordInput.sendKeys(password);
+
         //type(By.name("password"),password);
     }
-    public void submit(){
+    public void submitRegistration(){
+        click(By.cssSelector("//button[contains(text(),'Y'alla!')]"));
 
-        click(By.xpath("//button[contains(text(),'Y’alla!')]"));
     }
 
 }

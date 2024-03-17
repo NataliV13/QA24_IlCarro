@@ -26,10 +26,6 @@ public class HelperBase {
         element.click();
     }
 
-   // public boolean isLogget() {
-
-
-   // }
 
 }
 

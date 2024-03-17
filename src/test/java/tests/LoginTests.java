@@ -1,6 +1,5 @@
 package tests;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTests extends TestBase{
@@ -8,11 +7,15 @@ public class LoginTests extends TestBase{
     @Test
     public void LoginSuccess(){
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fiiLoginRegisrtationForm("olesia@gmail.com","OLol432&123");
-        app.getHelperUser().submit();
+        app.getHelperUser().fillLoginRegistrationForm("jon@gmail.com","Jj9876%$#123");
+        app.getHelperUser().submitRegistration();
 
 
-       // Assert.assertTrue(app.getHelperUser().isLogget());
+
+
+
+
+
 
     }
 
