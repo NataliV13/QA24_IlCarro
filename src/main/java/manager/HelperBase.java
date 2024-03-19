@@ -17,7 +17,6 @@ public class HelperBase {
     public void click(By locator){
         wd.findElement(locator).click();
     }
-
     public void type(By locator, String text){
         WebElement el = wd.findElement(locator);
         el.click();
@@ -25,9 +24,7 @@ public class HelperBase {
         if (text!=null){
             el.sendKeys(text);
         }
-
     }
-
     public void pause(int time){
         try {
             Thread.sleep(time);
@@ -37,8 +34,8 @@ public class HelperBase {
     }
 
     public boolean isElementPresent(By locator){
-//        List<WebElement>list = wd.findElements(locator);
-//        return list.size()>0;
+      // List<WebElement>list = wd.findElements(locator);
+       //return list.size()>0;
 
         return wd.findElements(locator).size()>0;
     }

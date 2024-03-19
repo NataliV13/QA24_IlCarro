@@ -14,52 +14,46 @@ public class LoginTests extends TestBase {
             app.getHelperUser().logout();
         }
     }
-
     @Test
     public void loginSuccess1() {
-        User user = new User().withEmail("margo@gmail.com").withPassword("Mmar123456$");
-        //        user.setEmail("marga@gmail.com");
-//        user.setPassword("Mmar123456$");
+        User user = new User().whithEmail("jon@gmail.com").withPassword("Jj9876%$#123");
+
+
+        //user.setEmail("jon@gmail.com");
+        //user.setPassword("Jj9876%$#123");
 
         app.getHelperUser().openLoginForm();
         app.getHelperUser().fillLoginForm(user);
         app.getHelperUser().submitLogin();
         //Assert if element with text "Logged in success" is present
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
-        //app.getHelperUser().clickOkButton();
-
+        app.getHelperUser().clickOkButton();
     }
-
-
     @Test
     public void loginSuccess() {
         app.getHelperUser().openLoginForm();
-        app.getHelperUser().fillLoginForm("marga@gmail.com", "Mmar123456$");
+        app.getHelperUser().fillLoginForm("jon@gmail.com", "Jj9876%$#123");
         app.getHelperUser().submitLogin();
         //Assert if element with text "Logged in success" is present
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
         //app.getHelperUser().clickOkButton();
-
     }
-
     @Test
     public void loginSuccessModel() {
         app.getHelperUser().openLoginForm();
-        app.getHelperUser().fillLoginForm("marga@gmail.com", "Mmar123456$");
+        app.getHelperUser().fillLoginForm("jon@gmail.com", "Jj9876%$#123");
         app.getHelperUser().submitLogin();
         //Assert if element with text "Logged in success" is present
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
-        //app.getHelperUser().clickOkButton();
-
+       // app.getHelperUser().clickOkButton();
     }
-
     @Test
     public void loginWrongEmail() {
 
     }
 
     @Test
-    public void loginWongPassword() {
+    public void loginWrongPassword() {
 
     }
 
