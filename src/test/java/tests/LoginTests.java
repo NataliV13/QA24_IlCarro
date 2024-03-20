@@ -27,7 +27,7 @@ public class LoginTests extends TestBase {
         app.getHelperUser().submitLogin();
         //Assert if element with text "Logged in success" is present
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
-        app.getHelperUser().clickOkButton();
+       // app.getHelperUser().clickOkButton();
     }
     @Test
     public void loginSuccess() {
@@ -49,6 +49,12 @@ public class LoginTests extends TestBase {
     }
    @Test
    public void loginWrongEmail() {
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("jon@gmail.co","Jj9876%$#123");
+        app.getHelperUser().submitLogin();
+        Assert.assertEquals(app.getHelperUser().getMessage(),"Login or Password incorrect");
+        app.getHelperUser().clickOkButton();
+
 
 
     }
