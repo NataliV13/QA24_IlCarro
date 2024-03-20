@@ -6,7 +6,6 @@ public class User {
     private String email;
     private String password;
 
-//vmesto set pishen with eto odno i toje
     public User withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
