@@ -47,8 +47,9 @@ public class LoginTests extends TestBase {
         Assert.assertEquals(app.getHelperUser().getMessage(), "Logged in success");
        // app.getHelperUser().clickOkButton();
     }
-    @Test
-    public void loginWrongEmail() {
+   @Test
+   public void loginWrongEmail() {
+
 
     }
 
