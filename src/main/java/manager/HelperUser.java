@@ -36,7 +36,8 @@ public class HelperUser extends HelperBase {
     }
 
     public void clickOkButton() {
-        click(By.xpath("//button[text()='Ok']"));
+        if (isElementPresent(By.xpath("//button[text()='Ok']"))){
+        click(By.xpath("//button[text()='Ok']"));}
     }
 
     public boolean isLogged() {
@@ -45,5 +46,8 @@ public class HelperUser extends HelperBase {
 
     public void logout() {
         click(By.xpath("//*[.=' Logout ']"));
+    }
+    public String getErrorText() {
+        return  wd.findElement(By.cssSelector("div.error")).getText();
     }
 }
