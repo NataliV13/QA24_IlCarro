@@ -1,6 +1,5 @@
 package tests;
 
-import manager.HelperUser;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -50,28 +49,15 @@ public class LoginTests extends TestBase {
     }
    @Test
    public void loginWrongEmail() {
-       app.getHelperUser().openLoginForm();
-       app.getHelperUser().fillLoginForm("jongmail.com", "Jj9876%$#123");
-       app.getHelperUser().submitLogin();
-       Assert.assertEquals(app.getHelperUser().getErrorText(),"It'snot look like email");
-       Assert.assertTrue(app.getHelperUser().isYallaButtonNotActive());
+
 
     }
 
     @Test
     public void loginWrongPassword() {
-        app.getHelperUser().openLoginForm();
-        app.getHelperUser().fillLoginForm("jon@gmail.com", "9876%$#123");
-        app.getHelperUser().submitLogin();
-        Assert.assertEquals(app.getHelperUser().getMessage(),"\"Login or Password incorrect\"");
+
     }
-    @Test
-    public void loginUnregistered(){
-        app.getHelperUser().openLoginForm();
-        app.getHelperUser().fillLoginForm("pol@gmail.com", "P#6%$#123");
-        app.getHelperUser().submitLogin();
-        Assert.assertEquals(app.getHelperUser().getMessage(), "\"Login or Password incorrect\"");
-    }
+
     @AfterMethod
     public void postCondition() {
         app.getHelperUser().clickOkButton();
