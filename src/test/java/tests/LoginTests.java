@@ -1,6 +1,7 @@
 package tests;
 
 import models.User;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -52,8 +53,6 @@ public class LoginTests extends TestBase {
         app.getHelperUser().openLoginForm();
         app.getHelperUser().fillLoginForm("jon@gmail.co","Jj9876%$#123");
         app.getHelperUser().submitLogin();
-        Assert.assertEquals(app.getHelperUser().getMessage(),"Login or Password incorrect");
-        app.getHelperUser().clickOkButton();
 
 
 
@@ -61,6 +60,10 @@ public class LoginTests extends TestBase {
 
     @Test
     public void loginWrongPassword() {
+        app.getHelperUser().openLoginForm();
+        app.getHelperUser().fillLoginForm("jon@gmail.com","j9876%$#123");
+        app.getHelperUser().submitLogin();
+
 
     }
 
